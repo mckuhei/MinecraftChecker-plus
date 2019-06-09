@@ -1,4 +1,4 @@
-# SpotifyChecker
+# MinecraftChecker
 Credential stuffing program for Minecraft. This program was made for educational purposes only. I am not responsible for what you use this for.
 
 ## Installation
