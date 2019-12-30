@@ -6,6 +6,8 @@ Credential stuffing program for Minecraft. This program was made for educational
 2. Use the `pip` command to install the requirements
 ```bash
 pip install requests
+pip install cmdscreen
+pip install ctypes
 ```
 ## Usage
 1. Make a new file called `users.txt`, and put all of your accounts in it formatted as `user:pass`
