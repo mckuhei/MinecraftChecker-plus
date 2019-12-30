@@ -52,7 +52,7 @@ def login(username, password,threadid):
 			log.info("[Thread#"+str(threadid)+"]Checking " +username+":"+password+"proxy:"+proxies)
 			#cmdscreen.set_cmd_text_color(0x07)
 			try:
-				resp = requests.post(url, json=payload, headers={"Content-Type": "application/json"},proxies={"http":"http://"+proxies+"/","https":"https://"+proxies+"/"})
+				resp = requests.post(url, json=payload, headers={"Content-Type": "application/json"})
 			except:
 				#cmdscreen.set_cmd_text_color(0x04)
 				log.error("[Thread#"+str(threadid)+"]An error has occured whilst POSTing to Minecraft")
@@ -63,7 +63,7 @@ def login(username, password,threadid):
 
 			if resp.status_code == 403:
 				if "Invalid username or password." in resp.text:
-					log.error(username+":"+password+" is invalid")
+					log.error("[Thread#"+str(threadid)+"] "+username+":"+password+" is invalid")
 				else:log.error("[Thread#"+str(threadid)+"]Account information is wrong (or you're shadowbanned)")
 					
 			try:
@@ -123,8 +123,9 @@ if __name__ == "__main__":
 		#time.sleep(0.5) 
 		Thread_pool[i].setDaemon(True)
 		Thread_pool[i].start()
-		log.info("creating Thread#"+str(i)+" Please wait.")
+		log.info("creating Thread#"+str(i+1)+" Please wait.")
 	start = 'doit'
 	while True:
 		if gobal_num == len(Thread_pool):
+			time.sleep(10)
 			exit(1)
