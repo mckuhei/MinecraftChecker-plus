@@ -52,7 +52,7 @@ def login(username, password,threadid):
 			log.info("[Thread#"+str(threadid)+"]Checking " +username+":"+password+"proxy:"+proxies)
 			#cmdscreen.set_cmd_text_color(0x07)
 			try:
-				resp = requests.post(url, json=payload, headers={"Content-Type": "application/json"})
+				resp = requests.post(url, json=payload, headers={"Content-Type": "application/json"},proxies={"http":"http://"+proxies+"/","https":"https://"+proxies+"/"})
 			except:
 				#cmdscreen.set_cmd_text_color(0x04)
 				log.error("[Thread#"+str(threadid)+"]An error has occured whilst POSTing to Minecraft")
