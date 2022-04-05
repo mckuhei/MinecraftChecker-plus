@@ -1,8 +1,9 @@
-#Warning: Shit code.
-This program were written on 2019, I was noob of Python.
-
 # MinecraftChecker
 Credential stuffing program for Minecraft. This program was made for educational purposes only. I am not responsible for what you use this for.
+
+## Warning: Shit code.
+This program were written on 2019, I was noob of Python.
+
 
 ## Installation
 1. Install the latest version of Python from [here](https://www.python.org/downloads/)
