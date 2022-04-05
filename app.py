@@ -3,7 +3,7 @@ import logging
 import requests
 from threading import Thread
 import os
-import cmdscreen
+#import cmdscreen
 import time
 import inspect
 import ctypes
