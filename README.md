@@ -10,7 +10,6 @@ This program were written on 2019, I was noob of Python.
 2. Use the `pip` command to install the requirements
 ```bash
 pip install requests
-pip install cmdscreen
 pip install ctypes
 ```
 ## Usage
